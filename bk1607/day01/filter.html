@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style></style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	:first :last :not :even :odd :gt :lt :eq :header
+	*/
+	$(document).ready(function(){
+	  //:first
+	  // alert($("li:first").html());
+	  //:last
+	  // alert($("li:last").html());
+	  //:not
+	  // $("li:not(.red)").css("background","red");
+	  //:even
+	  // $("li:even").css("background","pink");
+	  //:odd
+	  // $("li:odd").css("background","#bfa");
+	  //:gt()
+	  // $("li:gt(2)").css("background","pink");
+	  //:lt()
+	  // $("li:lt(3)").css("background","pink");
+	  //:eq()
+	  // $("li:eq(1)").css("background","pink");
+	  //:header()
+	  $(":header").css("color","red");
+	});
+	</script>
+  </head>
+  <body>
+    <div>
+	  <h1>我要车珠子</h1>
+	  <ul>
+	    <li class="red">11111</li>
+		<li>22222</li>
+		<li>333</li>
+		<li>44</li>
+		<li>5</li>
+		<li>66</li>
+		<li>77777</li>
+	  </ul>
+	</div>
+  
+  </body>
+</html>

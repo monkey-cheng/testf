@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style></style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	  可见过滤器  :visible 
+	  不可见过滤器:hidden
+	*/
+	$(document).ready(function(){
+	   
+	   // console.log($("#div1 :visible"));
+	   // console.log($("#div1 :hidden"));
+	   // show();
+	   // $("#div1 :hidden").eq(0).css("border","1px solid red").show(3000);
+	   // $("#div1 :hidden").eq(1).css("background","#bfa").show(3000);
+	   console.log($("#div1 :visible"));
+	});
+	</script>
+  </head>
+  <body>
+    <div id="div1">
+	  <div>111111</div>
+	  <div style="display:none">222222</div>
+	  <input type="hidden" value="123" />
+	  <div>333333</div>
+	</div>
+  </body>
+</html>

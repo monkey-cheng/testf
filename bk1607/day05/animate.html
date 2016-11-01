@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style>
+	  *{margin:0;padding:0}
+	  div{
+	   width:100px;
+	   height:100px;
+	   background:red;
+	   position:relative;
+	   float:left;
+	  }
+	  #d2{
+	    background:blue;
+		display:none;
+		height:0;
+		top:50px;
+	  }
+	</style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	
+	*/
+	$(document).ready(function(){
+	  // $("div:first").animate({left:"300px"},3000,function(){
+	    // $(this).next().animate({left:"300px"},3000,function(){
+		  console.log(this);
+		  // $(this).next().animate({left:"300px"},3000);
+		// })
+	  // });
+	   // $("div:first").animate({top:50,height:0},3000);
+	   // $("div:first").animate({left:50,width:0},3000);
+	   
+	   $(document).click(f1);
+	   function f1(){
+	     $("div:first").animate({top:50,height:0},1000,f2);
+	   }
+	   function f2(){
+	     $("div:first").hide();
+	     $("div:last").show().animate({top:0,height:100},1000);
+	   }
+	});
+	</script>
+  </head>
+  <body>
+     <div id="d1"></div>
+	 <div id="d2"></div>
+	 
+  </body>
+</html>

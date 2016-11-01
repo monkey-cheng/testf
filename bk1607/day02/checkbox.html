@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style></style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	
+	*/
+	$(document).ready(function(){
+	  var $allBtn= $("#s1"),$canBtn= $("#c1");
+	  
+	  $allBtn.click(function(){
+	    // alert("ok");
+		// $("input[name]").attr("checked",true);
+		$("input[name]").prop("checked",true);
+	  });
+	  $canBtn.click(function(){
+	    // $("input[name]").attr("checked",false);
+		$("input[name]").prop("checked",false);
+	  });
+	});
+	</script>
+  </head>
+  <body>
+    <input type="checkbox" name="ck1" />
+	<input type="checkbox" name="ck1" />
+	<input type="button" value="all select" id="s1"/>
+	<input type="button" value="cancle" id="c1"/>
+  </body>
+</html>

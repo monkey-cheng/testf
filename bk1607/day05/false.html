@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style>
+	  a{
+	    text-decoration:none;
+		width:150px;
+		height:60px;
+		display:block;
+		background:pink;
+		float:left;
+		line-height:60px;
+		text-align:center;
+	  }
+	  ul{
+	    width:670px;
+		height:502px;
+		overflow:hidden;
+		position:relative;
+	  }
+	   ul li{
+	    width:670px;
+		height:502px;
+		position:absolute;
+		top:0;
+		left:0;
+	   }
+	</style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	
+	*/
+	$(document).ready(function(){
+	  $("a").hover(f1,f2);
+	  $("a").click(function(e){
+	    // return false;
+		e.preventDefault();
+	  });
+	  function f1(){
+	    $(this).css({background:"#bfa"});
+		$("li").hide();
+		$("li").eq($(this).index()).show();
+	  };
+	  function f2(){
+	    $(this).css({background:"pink"});
+		$("li").hide();
+		$("li").eq(0).show();
+	  }
+	});
+	</script>
+  </head>
+  <body>
+    <div id="main">
+	  <a href="http://www.baidu.com">服装摄影</a>
+	  <a href="http://www.jd.com">军事地理</a>
+	  <a href="http://www.dygod.com">考古</a>
+	</div>
+    <ul>
+	  <li><img src="1.jpg"/></li>
+	  <li><img src="2.jpg"/></li>
+	  <li><img src="3.jpg"/></li>
+		
+	</ul>
+  </body>
+</html>

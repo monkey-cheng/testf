@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style></style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	  children() next() find() siblings() parent()
+	*/
+	$(document).ready(function(){
+	  // console.log($("div").children());
+	  // console.log($("#d1").children().children());
+	  
+	  // console.log($("#d1 :first").next());
+	  
+	  // console.log($("#d1").find(".red,p"));
+	  
+	  //
+	  // console.log($("#d1 .red").siblings());
+	  
+	  //
+	  console.log($("#d1 .red").parent().
+	  parent().parent().parent());
+	});
+	</script>
+  </head>
+  <body>
+    <div id="d1">
+	  <div>1111</div>
+	  <div>2222</div>
+	  <div class="red">3333</div>
+	  <div>4444
+	    <p>4141</p>
+	  </div>
+	  <p>5555</p>
+	</div>
+	<div id="d2">
+	  <p>6666</p>
+	</div>
+  </body>
+</html>

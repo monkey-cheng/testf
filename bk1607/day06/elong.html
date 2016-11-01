@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style>
+	  #picdiv{
+	    
+	  }
+	  #picdiv ul{
+	    list-style:none;
+	  }
+	  #picdiv ul li{
+	    width:200px;
+		height:260px;
+		float:left;
+		position:relative;
+	  }
+	  #picdiv ul li div{
+	    width:100%;
+		height:260px;
+	  }
+	  #picdiv ul li div:first-child{
+	    position:absolute;
+		left:0;
+		top:0;
+	  }
+	  #picdiv ul li div h2{
+	    width:30px;
+		height:260px;
+		margin:30px auto;
+		color:#fff;
+		padding:30px ;
+	  }
+	</style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	
+	*/
+	$(document).ready(function(){
+	   $("#picdiv ul li").hover(f1,f2);
+	   
+	   function f1(){
+	     $(this).stop(true).animate({width:400}).siblings().stop(true).animate({width:160});
+	   }
+	   function f2(){
+	      $("#picdiv ul li").stop(true).animate({width:200});
+	   }
+	});
+	</script>
+  </head>
+  <body>
+   <div id="picdiv">
+     <ul>
+	   <li>
+	     <div class="desc"><h2>温泉酒店</h2></div>
+		 <div class="pic" style="background:url(eimg/1.jpg) center"> </div>
+	   </li>
+	   <li>
+	     <div class="desc"><h2>假日酒店</h2></div>
+		 <div class="pic" style="background:url(eimg/2.jpg) center"> </div>
+	   </li>
+	   <li>
+	     <div class="desc"><h2>七天酒店</h2></div>
+		 <div class="pic" style="background:url(eimg/3.jpg) center"> </div>
+	   </li>
+	   <li>
+	     <div class="desc"><h2>如家酒店</h2></div>
+		 <div class="pic" style="background:url(eimg/4.jpg) center"> </div>
+	   </li>
+	   <li>
+	     <div class="desc"><h2>汉庭酒店</h2></div>
+		 <div class="pic" style="background:url(eimg/5.jpg) center"> </div>
+	   </li>
+	   <li>
+	     <div class="desc"><h2>海盗酒店</h2></div>
+		 <div class="pic" style="background:url(eimg/6.jpg) center"> </div>
+	   </li>
+	 </ul>
+   </div>
+  </body>
+</html>

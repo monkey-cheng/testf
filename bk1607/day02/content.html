@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style></style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	 包含内容过滤器，空过滤器，含有过滤器，父过滤器
+	*/
+	$(document).ready(function(){
+	   // console.log($("div:contains(abcd)"));
+	   // console.log($("div:empty"));
+	   // console.log($("div:has(span)"));
+	   // console.log($("div:has(.red)").attr("id"));
+	   console.log($("div:parent").length);
+	});
+	</script>
+  </head>
+  <body>
+    <div>abcde</div>
+	<div>abc123</div>
+	<div id="d3"><div class="red" >123</div></div>
+	<div id="d4"><span>span</span></div>
+	<div> </div>
+  </body>
+</html>

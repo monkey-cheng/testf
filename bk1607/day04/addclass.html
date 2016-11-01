@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style>
+	  .red{
+	    width:100px;
+		height:100px;
+		background:red;
+	  }
+	  .green{
+	    width:100px;
+		height:100px;
+		background:green;
+	  }
+	</style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	 addClass() , removeClass() toggleClass() hasClass();
+	*/
+	$(document).ready(function(){
+	  // $("#d1").click(function(){
+	     // console.log($("#d2").hasClass("red"));
+	     // if($("#d2").hasClass("red")){
+		   // console.log("1");
+		   // $("#d2").removeClass();
+		 // }else{
+		   // console.log("2");
+		   // $("#d2").addClass("red");
+		   
+		 // console.log($("#d2").attr("class"));
+		 // if($("#d2").attr("class")){
+		   // $("#d2").removeClass();
+		 // }else{
+		   // $("#d2").addClass("red");
+		 // }
+	  // });
+	  $("#d1").click(function(){
+	    //toggleClass()
+		   $("#d2").toggleClass("red");
+	  
+	  });
+	});
+	</script>
+  </head>
+  <body>
+    <div id="d1" style="border:1px solid #eee">111</div>
+	<div id="d2" style="border:1px solid #eee">222</div>
+  </body>
+</html>

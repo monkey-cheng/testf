@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style></style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	 wrap()  wrapAll() wrapInner()
+	*/
+	$(document).ready(function(){
+	   var $div1= $("<div class='newDiv'></div>");
+	   var $d2= $(".d2");
+	   var $p=$("p");
+	   // $p.wrap($div1);
+	   // $p.wrapAll($div1);
+	   
+	   //使用现有的节点去包括 现有的节点
+	   // $p.wrapAll($d2);
+	   //包裹文本
+	   $p.wrapInner($div1);
+	   // $("#d1").wrapInner($div1);
+	});
+	</script>
+  </head>
+  <body>
+    <div id="d1">
+	  <p>1111</p>
+	  <p>222</p>
+	  <p><span>333</span></p>
+	</div>
+	<p>444</p>
+	
+  </body>
+</html>

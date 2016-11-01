@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style></style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	
+	*/
+	$(document).ready(function(){
+	   // console.log($("div :last"));
+	   $first= $("div :first");
+	   $last= $("div :last");
+	   // $first.replaceWith($last);
+	   $last.replaceAll($first);
+	});
+	</script>
+  </head>
+  <body>
+    <div>
+	  <div>1111</div>
+	  <div>2222</div>
+	  <div>3333</div>
+	</div>
+  </body>
+</html>

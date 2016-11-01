@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style>
+	  div{
+	    width:100px;
+		height:100px;
+		background:red;
+		position:absolute;
+	  }
+	</style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	
+	*/
+	$(document).ready(function(){
+	   
+	   $("div").mousedown(function(e){
+	      var offx= e.pageX- $(this).offset().left;
+		  var offy = e.pageY- $(this).offset().top;
+
+		  $(document).mousemove(function(e){
+		      var left= e.pageX-offx;
+			  var top = e.pageY-offy;
+		    
+			  //限定div的坐标位置在document内
+			  if(left<0){
+				left=0;
+			  }else if(left + $("div").width()> $(document).width()){
+				left= $(document).width()-$("div").width();
+			  }
+			  if(top<0){
+				top= 0;
+			  }else if(top +$("div").height() >$(document).height()){
+				top= $(document).height()-$("div").height();
+			  }
+		  
+		    $("div").css({left:left,top:top})
+		  });
+		  $(document).mouseup(function(){
+		    $(this).off();
+		  });
+	   });
+	});
+	</script>
+  </head>
+  <body>
+    <div>
+	</div>
+  </body>
+</html>
+ 

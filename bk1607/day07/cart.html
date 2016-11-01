@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style>
+	  *{margin:0;padding:0}
+	 
+	 #pic,#pic2{
+	   width:300px;
+	   height:450px;
+	   background:url(7.jpg) no-repeat center;
+	   background-size:cover;
+	   position:absolute;
+	   left:50px;
+	   top:50px;
+	 }
+	 #buy{
+	   width:300px;
+	   height:50px;
+	   background:url(buy.png) no-repeat center;
+	   position:absolute;
+	   left:50px;
+	   top:500px;
+	 }
+	 #cart{
+	   position:absolute;
+	   right:10px;
+	   bottom:100px;
+	   background:pink;
+	   width:150px;
+	   height:50px;
+	   line-height:50px;
+	   text-align:center;
+	   font-size:30px;
+	 }
+	</style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script src="js/jquery.fly.js"></script>
+	<script>
+	/*
+	
+	*/
+	$(document).ready(function(){
+	  var num = 0;
+	  $("#buy").click(function(){
+	    var $pic =$("<div id='pic2'></div>");
+		$("body").append($pic);
+	    // console.log($pic.height());
+		
+		var left = $("#cart").offset().left+ $("#cart").width()/2;
+		var top = $("#cart").offset().top + $("#cart").height()/2;
+		console.log($("#cart").offset().left+ " "+ 
+		    $("#cart").width()/2);
+		console.log($("#cart").offset().top + " "+
+		     $("#cart").height()/2);
+		
+		// $pic.animate({left:left,top:top,width:0,height:0},1000,function(){
+		   // $(this).remove();
+		   // $("#cart").html(++num);
+		// });
+		$pic.fly({
+		  start:{left:50,
+		        top:50},
+		  end:{left:left,top:top,width:0,height:0},
+		  onEnd:function(){
+		    $(this).remove();
+		    $("#cart").html(++num);
+		  }
+		});
+		
+	  });
+	  
+	});
+	</script>
+  </head>
+  <body>
+     
+	   <div id="pic"></div>
+	   <div id="buy"></div>
+	 
+	 <div id="cart" ></div>
+  </body>
+</html>

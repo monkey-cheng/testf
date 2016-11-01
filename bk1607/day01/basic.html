@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style>
+	  /*
+	  #div1{
+	    width:100px;
+		height:100px;
+		background:red;
+	  }
+	  .red{
+	    color:red;
+	  }
+	  */
+	</style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	 id选择器， 类选择器， 标签选择器，* ，组选择器
+	*/
+	$(document).ready(function(){
+	  //id selector
+	  // $("#div1").css("color","red");  //css 2个参数 ，是设置
+	  // alert($("#div1").css("color")); // css 1个参数，是获取
+	  // $("#div1").css({
+	    // width:"100px",
+		// height:"100px",
+		// background:"red"
+	  // });
+	  
+	  //类选择器，
+	  // $(".red").css("color","red");
+	  //标签选择器，
+	  // $("p").html("<span>我是一个span</span>");
+	  // console.log($("p").eq(0).html());
+	  // console.log($("p").eq(0).text());
+	  // $("input").val("我是一个按钮");
+	  // alert($("input").val());
+	  
+	  //*
+	  // alert($("*").length);
+	  // var $all = $("*");
+	  // for(var i in $all){
+	    // console.log($all[i]);
+	  // }
+	  
+	  //组选择器
+	  var $arr= $("#div1,#div2,input");
+	  
+	  // alert($arr.length);
+	  // attr("id");
+	  // for(var i=0;i<$arr.length;i++){
+	    // console.log($arr.eq(i).attr("id"));
+	  // }
+	    // console.log($arr.eq(0).attr("id"));
+	  $arr.each(function(){
+	    console.log($(this).attr("id"));
+	  });
+	});
+	</script>
+  </head>
+  <body>
+    <div id="div1" class="red">beign-----------
+	  <p></p>
+	  <p></p>
+	  <p></p>
+	</div>
+	<div id="div2" class="red">车珠子</div>
+	<input type="button" value="按钮" id="input1"/>
+	<div class="green">end ---------</div>
+  </body>
+</html>

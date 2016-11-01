@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style></style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	
+	*/
+	$(document).ready(function(){
+	   //hasClass()  // eq()
+	   // alert($("div").hasClass("red3"));
+	   // for(var i=0;i<$("div").length;i++){
+	     // console.log($("div").eq(i).html());
+	   // }
+	   // $("div").filter(".red,:first").css("color","red");
+	   // $("div").filter(function(index){
+	     // return $(this).hasClass("red");
+	   // });
+	    // console.log($("p").filter(function(){
+		  // return $("ol",this).length==1
+		// }));
+		// $("div").filter(function(){
+		  // console.log($(this));
+		  // return $(this).attr("class")=='red';
+		  // return this.className=='red';
+		// }).css("color","red");
+		// console.log($("div").text());
+		// console.log($("div").html());
+		 // $("div").each(function(){
+		   // console.log($(this).html());
+		 // });
+		 console.log($("div").map(function(){
+		   return $(this).html();
+		 }).get().join(","));
+		 //
+		 // console.log($("div").not(".red"))
+		 // $("div").not(".red,:first").css("color","red");
+		 // $("div").slice(0,2).css("color","red");
+	});
+	</script>
+  </head>
+  <body>
+    <div>1111</div>
+	<div class="red">2222</div>
+	<div>3333</div>
+	<div>4444</div>
+	
+  </body>
+</html>

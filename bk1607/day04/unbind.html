@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style>
+	  div{
+	    width:100px;
+		height:100px;
+		background:red;
+	  }
+	</style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	
+	*/
+	$(document).ready(function(){
+	  $("div").on("click",f1)
+	  $("div").on("click",f2)
+	  function f1(){
+	    alert(1);
+	  }
+	  function f2(){
+	    alert(2);
+	  }
+	  // $("div").off("click",f1);
+	  $("div").off();
+	  $("div").one("click",function(){
+	    alert(3);
+	  });
+	});
+	</script>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style></style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	 [attribute] [=] [!=] [^=] [$=] [*=] [][]
+	*/
+	$(document).ready(function(){
+	   // console.log($("div[class]"));
+	   // console.log($("div[id]"));
+	   //
+	   // console.log($("div[class=red]"));
+	   // console.log($("div[id=div1]"));
+	   //
+	   // console.log($("div[class!=red]"));
+	   //^
+	   // console.log($("div[class^=re]"));
+	   // $
+	   // console.log($("div[class$=ue]"));
+	   //
+	   // console.log($("div[class*=]"));
+	   //
+	   // console.log($("div[class='red blue'][id=d3]"));
+	});
+	</script>
+  </head>
+  <body>
+    <div class="red" id="div1">
+	  <div class="red blue">
+		  <div>1111</div>
+		  <p id="p1">2222</p>
+	  </div>
+	  <div class="red blue" id="d3">
+		  <div>1111</div>
+		  <p id="p1">2222</p>
+	  </div>
+	</div>
+  </body>
+</html>

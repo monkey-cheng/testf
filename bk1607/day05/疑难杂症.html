@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		div{width:500px;height:400px;background: yellow;}
+			li{margin-left:30px;float:left;width:50px;height:50px;margin-bottom: 10px;background: red;}
+			ul{width:400px;height:400px;background:yellowgreen}
+		</style>
+		<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var $Box=$('#box')
+				var $Ul=$('ul')
+				var $Li=$('li')
+				$Box.mouseover(function(){
+				  $Ul.show();
+				});
+				$Box.mouseout(function(){
+					// $Ul.css('display','none')
+					//$Ul.releaseCapture()
+					$Ul.hide();
+				
+				})
+				// $Ul.mouseover(function(){
+				  // $Ul.show();
+				// });
+				
+				
+			})
+			
+		/*window.onload=function(){
+			var Box=document.getElementById('box')
+			var Ul=document.getElementsByTagName('ul')[0]
+			var Li=document.getElementsByTagName('li')
+			Box.onmouseout=function(){
+				Ul.style.display='none'
+				
+			}
+			
+			
+			}
+			*/
+		</script>
+		
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li>111</li>
+				<li>111</li>
+				<li>111</li>
+				<li>111</li>
+				<li>111</li>
+				<li>111</li>
+				<li>111</li>
+				<li>111</li>
+				<li>111</li>
+				<li>111</li>
+				<li>111</li>
+				<li>111</li>
+				<li>111</li>
+				<li>111</li>
+				<li>111</li>
+				<li>111</li>
+				<li>111</li>
+				<li>111</li>
+				<li>111</li>
+			</ul>
+			
+			
+		</div>
+		
+	</body>
+</html>

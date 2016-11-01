@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style>
+	  div{
+	    position:absolute;
+	  }
+	</style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	
+	*/
+	$(document).ready(function(){
+	  //第一步，先获取一段文字
+	  //第二步，分隔文字，放到div，appendTo body ，设置一下div
+	  //第三步，document.onmousemove  ，让第一个字，跟紧鼠标
+	  //第四步，设置一个定时器，不断的修改每一个字的位置，让
+	  //        后面一个字的位置= 前面一个字的位置
+	  //        j= str.length-1  
+	  var str= prompt("请输入文字","红豆生南国，春来发几枝");
+	  
+	  //2.
+	  for(var i=0;i<str.length;i++){
+	    $("<div>"+str[i]+"</div>").appendTo($("body"));
+	  }
+	  
+	  //3.
+	  $(document).mousemove(function(e){
+	    $("div:first").css({left:e.pageX+20,top:e.pageY});
+	  });
+	  
+	  //4.
+	  var j= str.length-1;
+	  var timer= setInterval(function(){
+	    var $pre = $("div").eq(j-1);
+		$("div").eq(j).css({left:$pre.offset().left+20,
+		  top:$pre.offset().top});
+		// console.log($("div").eq(j).offset().left);
+		j--;
+		if(j<1){
+		  j=str.length-1;
+		}
+	  },10);
+	});
+	</script>
+  </head>
+  <body>
+  </body>
+</html>

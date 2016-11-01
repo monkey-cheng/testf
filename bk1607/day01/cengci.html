@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style></style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	层级选择器：后代选择器，子选择器，下一个，兄弟选择器
+	*/
+	$(document).ready(function(){
+	   //后代选择器
+	   // $("#div1 div").css("background","#bfa");
+	   //子选择器
+	   // $("#div1 > div").css("color","#f00");
+	    // $("body div").css("background","#bfa");
+		// $("body >div").css("background","#bfa");
+		// alert($("#div1 div").length);
+		// alert($("#div1 >div").length);
+		
+		//下一个  
+		// alert($("#one + li").html());
+		
+		//兄弟选择器
+		// alert($("#one~div").length);
+		alert($("#one").siblings().length);
+	});
+	</script>
+  </head>
+  <body>
+    <div id="div1">
+	  <div >0000</div>
+	  <div id="one">11111</div>
+	  <div class="red">22222</div>
+	  <div>33333
+	    <div>31</div>
+		<div>32</div>
+		<div>33</div>
+		<ul>
+		  <li>34</li>
+		</ul>
+	  </div>
+	</div>
+  
+  </body>
+</html>

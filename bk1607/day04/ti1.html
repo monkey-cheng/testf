@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style></style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	
+	*/
+	// $(document).ready(function(){
+	  
+	// });
+	var x= 4;
+	var obj={
+	  x:3,
+	  bar:function(){
+	    var x=2;
+		// alert(this.x);
+		setTimeout(function(){
+		  var x= 1;
+		  alert(this.x);
+		},1000);
+	  }
+	}
+	// 4  3   3   4
+	
+	
+	obj.bar();
+	
+	</script>
+  </head>
+  <body>
+  </body>
+</html>

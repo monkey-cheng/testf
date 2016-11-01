@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style>
+	  *{margin:0;padding:0}
+	  #nav ul{
+	    width:400px;
+		height:50px;
+		background:pink;
+		list-style:none;
+	  }
+	  #nav ul li {
+	    width:100px;
+		height:50px;
+		float:left;
+		line-height:50px;
+		text-align:center;
+	  }
+	  #sub ul{
+	    width:100px;
+		height:150px;
+		background:#bfa;
+		list-style:none;
+		display:none;
+	  }
+	  #sub ul li{
+	    width:100px;
+		height:30px;
+		line-height:30px;
+		text-align:center;
+	  }
+	</style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	
+	*/
+	$(document).ready(function(){
+	   // console.log($("#nav ul li"));
+	   //声明数组，把菜单值存起来
+	   var nav= ["首页","军事","经济","服装"];
+	   var sub= [["111","222","333","444","555"],
+	             ["aaa","bbb","ccc","ddd","eee"],
+				 ["111","222","333","444","555"],
+				 ["aaa","bbb","ccc","ddd","eee"]];
+	   //创建节点
+	   var $mainNav = $("#nav");
+	   var $mainNavUl= $("<ul></ul>");
+	   $mainNavUl.appendTo($mainNav);
+	   for(var i=0;i<nav.length;i++){
+	     $li= $("<li>"+nav[i]+"</li>");
+		 $li.appendTo($mainNavUl);
+	   }
+	   //创建子菜单
+	   var $subNav = $("#sub");
+	   for(var i=0;i<sub.length;i++){
+	     var $subNavUl= $("<ul></ul>");
+		 $subNavUl.appendTo($subNav);
+		 for(var j=0;j<sub[i].length;j++){
+		   $li= $("<li>"+sub[i][j]+"</li>");
+		   $li.appendTo($subNavUl);
+		 }
+	   }
+	   var $navLi= $("#nav ul li");
+	   for(var i=0;i<$navLi.length;i++){
+	     $navLi.eq(i)[0].index = i;
+	     $navLi.eq(i).mouseover(function(){
+		    $("#sub ul").eq(this.index).show();
+			$("#sub ul").eq(this.index).css({
+			  position:"absolute",
+			  left:100*(this.index)+"px",
+			  top:"50px"
+			});
+			
+		 });
+		 $navLi.eq(i).mouseout(function(){
+		   $("#sub ul").eq(this.index).hide();
+		 });
+	   }
+	});
+	</script>
+  </head>
+  <body>
+    <div id="nav">
+	</div>
+	<div id="sub">
+	</div>
+  </body>
+</html>

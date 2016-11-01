@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style>
+	</style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	
+	*/
+	$(document).ready(function(){
+	    $("input[type=submit]").click(function(){
+		   // alert("aaa");
+		   var name= $(this).prev().prev().val();
+		   var pwd = $(this).prev().val();
+		   // alert(name);
+		   // alert(pwd)
+		   $.ajax({
+		     url:"http://bokanappapi.sinaapp.com/HQNews/user/userlogin.php",
+			 data:{username:name,password:pwd},
+			 dataType:"json",
+			 success:function(msg){
+			   if(msg.code==400){
+			     console.log(msg.data.msg)
+			   }else if(msg.code==200){
+			     alert("登录成功");
+				 window.location="http:www.jd.com";
+			   }
+			   
+			 },
+			 error:function(err){
+			   //alert(err.code)
+			   console.log(err);
+			 }
+		   });
+		});
+	});
+	</script>
+  </head>
+  <body>
+   <form method="post" onsubmit="return false">
+     用户名：<input type="text" placeholder="用户名" />
+	 密&nbsp;码：<input type="password" placeholder="密码" />
+	 <input type="submit" value="登录" />
+   
+   </form>
+  </body>
+</html>

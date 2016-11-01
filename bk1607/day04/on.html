@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style></style>
+	<script src='js/jquery-1.12.4.js'></script>
+	<script>
+	/*
+	
+	*/
+	$(document).ready(function(){
+	   $li =$("li");
+	   //使用for循环的方式绑定事件
+	   // for(var i=0;i<$li.length;i++){
+	     // $li.eq(i).click(function(){
+		   // alert($(this).index());
+		 // });
+	   // }
+	   //使用 jquery 的隐式循环绑定事件
+	   // $li.click(function(){
+	     // //console.log(this);
+		 // alert($(this).index());
+	   // });
+	   // bind方法和 click 事件方法一样，都是直接绑定在具体对象上
+	     // $li.bind("click",function(){
+		   // alert($(this).index());
+		 // });
+		//delegate方法将事件绑定在 委托对象上
+		 // $("ul").delegate($li,"click",function(event){
+		    // console.log($li.eq());
+		   // alert($li.html());
+		   // alert("aa");
+		   // alert($(event.target).attr("index"));
+		 // });
+		 //on方法，可以代替其他三个方法进行事件绑定
+		 // $li.on("click",function(){
+		   // alert($(this).index());
+		 // });
+		 $("ul").on("click",$li,function(event){
+		   alert($(event.target).index());
+		 });
+	   $("ul").append($("<li>5555</li>"));
+	});
+	</script>
+  </head>
+  <body>
+    <ul>
+	  <li >11</li>
+	  <li >22</li>
+	  <li >33</li>
+	  <li >44</li>
+	</ul>
+  </body>
+</html>

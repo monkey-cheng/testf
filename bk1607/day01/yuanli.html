@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title></title>
+	<style></style>
+	<script>
+	/*
+	
+	*/
+	window.onload=function(){
+	  // var btn=document.getElementById("btn");
+	  // var img= document.getElementById("img");
+	  // btn.onclick=function(){
+	    // alert("aaa");
+		// img.style.display="none";
+	  // }
+	  var $ = function(id){
+	    return document.getElementById(id);
+	  }
+	  $("btn").onclick=function(){
+	    // $("img").style.display="none";
+		// $("img2").style.display="none";
+		// $("img").hide();
+		// $("img2").hide();
+		   new F("img").hide();
+		   new F("img2").hide();
+	  }
+	  // HTMLElement.prototype.hide=function(){
+	    // this.style.display="none";
+	  // }
+	  var F=function(id){
+	    this.element= document.getElementById(id);
+	  }
+	  F.prototype.hide= function(){
+	    this.element.style.display="none";
+	  }
+	  
+	}
+	</script>
+  </head>
+  <body>
+    <input type="button" value="click me" id="btn"/>
+	<img src="2.jpg" id="img"/>
+	<img src="4.jpg" id="img2"/>
+  </body>
+</html>
